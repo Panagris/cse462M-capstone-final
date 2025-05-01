@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload Demo</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-2xl font-bold mb-4 text-center">Image Upload</h1>
+        
+        <form action="/submit" method="POST" id="uploadForm" enctype="multipart/form-data">
+            <label class="block mb-2 text-gray-700 font-medium text-center">Choose an image to upload:</label>
+            <div style="text-align:center;">
+                <input type="file" id="image" name="image" class="block w-full text-gray-700 border rounded-lg p-2 mb-4" accept="image/*">
+            </div>
+
+            <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 w-full ">
+                Upload Image
+            </button>
+        
+        </form>
+
+        <div id="result" class="mt-4 hidden">
+            <h2 class="text-xl font-semibold text-center mb-2">Processed Result</h2>
+            <img id="resultImage" src="" alt="Processed Image" class="w-full rounded-lg shadow">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processed Image Channels</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            /* Space between images */
+        }
+
+        .image-box {
+            text-align: center;
+            flex: 1;
+        }
+
+        img {
+            width: 100%;
+            /* Ensure images fit within their containers */
+            max-width: 200px;
+            /* Adjust width as needed */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full">
+        <h1 class="text-2xl font-bold mb-4 text-center">Processed Image Channels</h1>
+
+        <div class="image-container">
+            <div class="image-box">
+                <h2 class="text-lg font-semibold">Red</h2>
+                <img src="data:image/png;base64,{{ r_img }}" alt="Red Channel">
+            </div>
+
+            <div class="image-box">
+                <h2 class="text-lg font-semibold">Green</h2>
+                <img src="data:image/png;base64,{{ g_img }}" alt="Green Channel">
+            </div>
+
+            <div class="image-box">
+                <h2 class="text-lg font-semibold">Blue</h2>
+                <img src="data:image/png;base64,{{ b_img }}" alt="Blue Channel">
+            </div>
+
+            <!-- <div class="image-box">
+                <h2 class="text-lg font-semibold">Convolved Output</h2>
+                <img src="data:image/png;base64,{{ convolved_img }}" alt="Convolved Output">
+            </div> -->
+        </div>
+
+<!--         <div class="text-center mb-6">
+            <h2 class="text-lg font-semibold">Convolved Output</h2>
+            <img src="data:image/png;base64,{{ convolved_img }}" alt="Convolved Output" class="mx-auto mt-2">
+        </div> -->
+        
+        <br>
+
+        <div class="text-center mt-4">
+            <a href="/" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600">
+                Upload Another Image
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
