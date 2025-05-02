@@ -7,3 +7,7 @@ Authors:
 * Chiagozie Okoye, B.S. Computer Engineering, <c.i.okoye@wustl.edu> 
 * Sandro Xiao, B.S. Computer Science, <sandro@wustl.edu>
 
+The SystemVerilog files provided include all relevant sources files as well as a block 
+diagram. If re-synthesis of the design is desired, it should be ensured that the block 
+design is the Top Level Module, and that a Verilog wrapper for the diagram is 
+properly generated.

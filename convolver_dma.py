@@ -158,7 +158,7 @@ class Application:
             f.writelines(f"{val:x}\n" for val in output_buf)
 
         with open("CNN_output_bin.txt", "w") as f:
-            f.writelines(f"{val:b}\n" for val in output_buf)
+            f.writelines(f"{val:032b}\n" for val in output_buf)
 
         print("Wrote output to CNN_output_hex.txt, CNN_output_bin.txt!")
 
