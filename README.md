@@ -1,5 +1,6 @@
 # FPGA-Based Acceleration of Convolutional Neural Networks for Facial Recognition
-### Washington University in St. Louis - CSE 462M Capstone Design Project
+### Washington University in St. Louis
+### Spring 2025 - CSE 462M Capstone Design Project
 
 
 Authors: 
